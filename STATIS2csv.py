@@ -47,8 +47,8 @@ def read_STATIS(STATIS):
 
 # initialize parser
 parser = argparse.ArgumentParser(description='Converts a DL_POLY 4 STATIS file to CSV format.')
-parser.add_argument('STATIS', nargs='?', type=str, help='STATIS file', default='STATIS')
-parser.add_argument('CSV', nargs='?', type=str, help='CSV file', default='STATIS.csv')
+parser.add_argument('STATIS', nargs='?', type=str, help='filename of STATIS file, default: STATIS', default='STATIS')
+parser.add_argument('-o', '--out', metavar='CSV', dest='CSV', type=str, help='filename for CSV output, default: STATIS.csv', default='STATIS.csv')
 
 # parse arguments
 args = parser.parse_args()
